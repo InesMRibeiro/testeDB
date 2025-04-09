@@ -20,8 +20,8 @@ resource "aws_instance" "dois" {
                 echo "Starting backend server setup..."
 
                 cd /home/ubuntu
-                if [ ! -d "testes" ]; then
-                    git clone https://github.com/InesMRibeiro/testes.git
+                if [ ! -d "testesDB" ]; then
+                    git clone https://github.com/InesMRibeiro/testeDB.git
                 else
                     echo "Repository already cloned."
                 fi
@@ -32,7 +32,7 @@ resource "aws_instance" "dois" {
                 python3 -m venv venv
                 source venv/bin/activate
 
-                cd testes/backend
+                cd testesDB/backend
 
                 if [ -f "requirements.txt" ]; then
                      pip install -r requirements.txt
@@ -43,9 +43,9 @@ resource "aws_instance" "dois" {
 
                 # Mark the directory as safe for Git operations
                 export HOME=/home/ubuntu
-                git config --global --add safe.directory /home/ubuntu/testes
+                git config --global --add safe.directory /home/ubuntu/testesDB
 
-                sudo chown -R ubuntu:ubuntu /home/ubuntu/testes
+                sudo chown -R ubuntu:ubuntu /home/ubuntu/testesDB
 
                 EOF
 }

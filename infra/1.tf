@@ -25,16 +25,16 @@ resource "aws_instance" "um" {
                 echo "<h1>Deploying Frontend</h1>" > index.html
 
                 cd /home/ubuntu
-                if [ ! -d "testes" ]; then
-                git clone https://github.com/InesMRibeiro/testes.git
+                if [ ! -d "testesDB" ]; then
+                git clone https://github.com/InesMRibeiro/testeDB.git
                 fi
-                sudo cp  -r testes/frontend/* /var/www/html/
+                sudo cp  -r testesDB/frontend/* /var/www/html/
 
                 # Mark the directory as safe for Git operations
                 export HOME=/home/ubuntu
-                git config --global --add safe.directory /home/ubuntu/testes
+                git config --global --add safe.directory /home/ubuntu/testesDB
 
-                sudo chown -R ubuntu:ubuntu /home/ubuntu/testes
+                sudo chown -R ubuntu:ubuntu /home/ubuntu/testesDB
 
                 EOF
 
