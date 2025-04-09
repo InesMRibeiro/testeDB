@@ -6,7 +6,7 @@ provider "aws" {
 
 # Output the Public IPs
 output "um" {
-  value = aws_instance.tres.public_ip
+  value = aws_instance.um.public_ip
   
 }
 
@@ -16,6 +16,6 @@ output "dois" {
 }
 
 output "tres" {
-  value = aws_instance.tres.public_ip
+  value = aws_instance.tres.public_ipexi
   
 }

@@ -1,7 +1,7 @@
 document.getElementById("saveButton").addEventListener("click", function() {
     const name = document.getElementById("nameInput").value;
     if (name) {
-        fetch("http://44.202.1.64:5000/add_name", {
+        fetch("http://44.203.147.53:5000/add_name", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -23,7 +23,7 @@ document.getElementById("saveButton").addEventListener("click", function() {
 });
 
 function loadNames() {
-    fetch("http://44.202.1.64:5000/get_names")
+    fetch("http://44.203.147.53:5000/get_names")
         .then(response => response.json())
         .then(names => {
             const namesList = document.getElementById("namesList");

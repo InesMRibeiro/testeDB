@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS # type: ignore
 
 app = Flask(__name__)
-CORS(app, resources={"/*": {"origins": "http://54.86.25.106"}}) # ADD IP WITHOUT PORT
+CORS(app, resources={"/*": {"origins": "http://35.171.6.244"}}) # ADD IP WITHOUT PORT
 app.config.from_object('config.Config')
 
 db = SQLAlchemy(app)
