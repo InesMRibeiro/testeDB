@@ -132,3 +132,7 @@
 
 3. Decifragem do documento:
    - Doc = Dec_{K_AES}(T)
+
+4. Verificação de integridade e autenticidade:
+   - H(Doc) == h
+   - Verify(K_S+, h || N, Sig_S)
