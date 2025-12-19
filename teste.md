@@ -133,6 +133,8 @@
 3. Decifragem do documento:
    - Doc = Dec_{K_AES}(T)
 
-4. Verificação de integridade e autenticidade:
-   - H(Doc) == h
-   - Verify(K_S+, h || N, Sig_S)
+4. Verificações de segurança:
+   - O Member executa as mesmas verificações de integridade e autenticidade descritas na Fase 2.
+
+5. Membro obtem o documento 
+
